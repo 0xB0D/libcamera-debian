@@ -1,3 +1,9 @@
+libcamera (0~git20200629+e7aa92a-8~fto10+1) buster-fasttrack; urgency=medium
+
+  * Rebuild for buster-fasttrack.
+
+ -- Andrej Shadura <andrew.shadura@collabora.co.uk>  Sun, 23 May 2021 13:23:25 +0200
+
 libcamera (0~git20200629+e7aa92a-8) unstable; urgency=medium
 
   * Explicitly not install *.so.sign — or maybe we should?
