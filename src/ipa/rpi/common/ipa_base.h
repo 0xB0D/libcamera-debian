@@ -61,12 +61,15 @@ protected:
 	/* Track the frame length times over FrameLengthsQueueSize frames. */
 	std::deque<utils::Duration> frameLengths_;
 	utils::Duration lastTimeout_;
+	ControlList libcameraMetadata_;
+	bool statsMetadataOutput_;
 
 private:
 	/* Number of metadata objects available in the context list. */
 	static constexpr unsigned int numMetadataContexts = 16;
 
 	virtual int32_t platformInit(const InitParams &params, InitResult *result) = 0;
+	virtual int32_t platformStart(const ControlList &controls, StartResult *result) = 0;
 	virtual int32_t platformConfigure(const ConfigParams &params, ConfigResult *result) = 0;
 
 	virtual void platformPrepareIsp(const PrepareParams &params,
@@ -88,7 +91,6 @@ private:
 
 	bool lensPresent_;
 	bool monoSensor_;
-	ControlList libcameraMetadata_;
 
 	std::array<RPiController::Metadata, numMetadataContexts> rpiMetadata_;
 
@@ -116,6 +118,12 @@ private:
 	/* Frame duration (1/fps) limits. */
 	utils::Duration minFrameDuration_;
 	utils::Duration maxFrameDuration_;
+
+	/* The current state of flicker avoidance. */
+	struct FlickerState {
+		int32_t mode;
+		utils::Duration manualPeriod;
+	} flickerState_;
 };
 
 } /* namespace ipa::RPi */
