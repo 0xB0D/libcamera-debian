@@ -2,6 +2,7 @@ libcamera (0.2.0-1) UNRELEASED; urgency=medium
 
   * New upstream version 0.2.0
   * Don't move doc during dh_install if the nodoc profile is set (Closes: #1051195)
+  * Drop patch included in upstream release
 
  -- Dylan Aïssi <daissi@debian.org>  Tue, 09 Jan 2024 21:11:24 +0100
 
