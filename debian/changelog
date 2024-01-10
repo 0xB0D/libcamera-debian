@@ -6,6 +6,7 @@ libcamera (0.2.0-1) UNRELEASED; urgency=medium
      (Closes: #1051195)
   * Drop patch included in upstream release
   * Mark python3-libcamera as Multi-Arch: same
+  * Update debian/copyright
 
  -- Dylan Aïssi <daissi@debian.org>  Tue, 09 Jan 2024 21:11:24 +0100
 
