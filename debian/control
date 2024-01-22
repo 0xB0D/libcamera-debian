@@ -118,7 +118,7 @@ Description: complex camera support library (tools)
  This package provides cam and qcam, libcamera "Swiss army knife" tools.
 
 Package: libcamera-v4l2
-Architecture: any
+Architecture: linux-any
 Depends: ${misc:Depends},
          ${shlibs:Depends}
 Breaks: libcamera0 (<< 0.0.3-1~)
