@@ -19,6 +19,8 @@ override_dh_auto_configure:
 		--libexecdir=lib/${DEB_HOST_MULTIARCH} \
 		-Dgstreamer=enabled \
 		-Dpycamera=enabled \
+		-Dpipelines=simple/simple \
+		-Dipas=simple/simple \
 		-Dtest=true \
 		$(CONFFLAGS) \
 		$(empty)
