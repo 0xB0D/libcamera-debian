@@ -17,6 +17,7 @@ libcamera_sources = files([
     'delayed_controls.cpp',
     'device_enumerator.cpp',
     'device_enumerator_sysfs.cpp',
+    'dma_heaps.cpp',
     'fence.cpp',
     'formats.cpp',
     'framebuffer.cpp',
@@ -40,6 +41,7 @@ libcamera_sources = files([
     'process.cpp',
     'pub_key.cpp',
     'request.cpp',
+    'software_isp.cpp',
     'source_paths.cpp',
     'stream.cpp',
     'sysfs.cpp',
@@ -69,6 +71,7 @@ subdir('converter')
 subdir('ipa')
 subdir('pipeline')
 subdir('proxy')
+subdir('software_isp')
 
 null_dep = dependency('', required : false)
 

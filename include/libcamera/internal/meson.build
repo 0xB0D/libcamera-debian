@@ -25,6 +25,7 @@ libcamera_internal_headers = files([
     'device_enumerator.h',
     'device_enumerator_sysfs.h',
     'device_enumerator_udev.h',
+    'dma_heaps.h',
     'formats.h',
     'framebuffer.h',
     'ipa_manager.h',
@@ -38,6 +39,8 @@ libcamera_internal_headers = files([
     'process.h',
     'pub_key.h',
     'request.h',
+    'shared_mem_object.h',
+    'software_isp.h',
     'source_paths.h',
     'sysfs.h',
     'v4l2_device.h',
@@ -48,3 +51,4 @@ libcamera_internal_headers = files([
 ])
 
 subdir('converter')
+subdir('software_isp')
